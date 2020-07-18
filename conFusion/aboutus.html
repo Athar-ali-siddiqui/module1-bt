@@ -6,6 +6,8 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -22,15 +24,19 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="./index.html" class="nav-link">Home</a>
+          <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item text-center ">
+              <a href="./index.html" class="nav-link"><span class="fa fa-home fa-lg"></span> Home</a>
             </li>
-            <li class="nav-item active">
-              <a href="#" class="nav-link">About</a>
+            <li class="nav-item active text-center">
+              <a href="#" class="nav-link"><span class="fa fa-info-circle fa-lg"></span> About</a>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">ds</a></li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link"><span class="fa fa-bars fa-lg"></span>Menu</a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span>Contact</a>
+            </li
           </ul>
         </div>
       </div>
@@ -83,10 +89,39 @@
             cuisines in a pan.
           </p>
         </div>
-        <div></div>
+        <div class="col-sm">
+          <div class="card">
+            <h3 class="card-header text-white faag">Fact At A Glance</h3>
+            <div class="card-body">
+              <dl class="row">
+                <dt class="col-6">Started</dt>
+                <dd class="col-6">3 Feb. 2013</dd>
+                <dt class="col-6">Major Stake Holder</dt>
+                <dd class="col-6">HK Fine Foods Inc.</dd>
+                <dt class="col-6">Last Year's Turnover</dt>
+                <dd class="col-6">$1,250,375</dd>
+                <dt class="col-6">Employees</dt>
+                <dd class="col-6">40</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        
+          <div class="col-12 mt-4">
+            <div class="card card-body bg-light">
+              <blockquote class="blockquote">
+                <p class="md-0">ou better cut the pizza in four pieces because
+                I'm not hungry enough to eat six.</p>
+              </blockquote>
+              <footer class="blockquote-footer">Yogi Berra,
+              <cite>
+              P. Pepe, Diversion Books, 2014</cite></footer>
+            </div>
+          
+        </div>
       </div>
 
-      <div class="row row-content1">
+      <div class="row row-content">
         <div class="col-12">
           <h2>Corporate Leadership</h2>
           <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
@@ -133,6 +168,50 @@
           </p>
         </div>
       </div>
+      <div class="row row-content">
+        <div class="col-12">
+          <h2>Fact & Figures</h2>
+          <div class="table-responsive">
+            <table class="table table-stripped">
+              <thead class="thead-dark">
+                <tr>
+                  <th></th>
+                  <th>2013</th>
+                  <th>2014</th>
+                  <th>2015</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Employees</th>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>40</td>
+                </tr>
+                <tr>
+                  <th>Guests Served</th>
+                  <td>15000</td>
+                  <td>45000</td>
+                  <td>100,000</td>
+                </tr>
+                <tr>
+                  <th>Special Events</th>
+                  <td>3</td>
+                  <td>20</td>
+                  <td>45</td>
+                </tr>
+                <tr>
+                  <th>Annual Turnover</th>
+                  <td>$251,325</td>
+                  <td>$1,250,375</td>
+                  <td>~$3,000,000</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer class="footer">
@@ -144,7 +223,7 @@
               <li><a href="./index.html">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Menu</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="./contactus.html">Contact</a></li>
             </ul>
           </div>
           <div class="col-7 col-sm-5">
@@ -153,19 +232,20 @@
               121, Clear Water Bay Road<br />
               Clear Water Bay, Kowloon<br />
               HONG KONG<br />
-              Tel.: +852 1234 5678<br />
-              Fax: +852 8765 4321<br />
-              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+              121, Clear Water Bay Road<br />
+              <i class="fa fa-phone fa-lg"></i></i>: +852 1234 5678<br />
+              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
+              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
             </address>
           </div>
           <div class="col-12 col-sm-4 align-self-center">
             <div class="text-center">
-              <a href="http://google.com/+">Google+</a>
-              <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
-              <a href="http://www.linkedin.com/in/">LinkedIn</a>
-              <a href="http://twitter.com/">Twitter</a>
-              <a href="http://youtube.com/">YouTube</a>
-              <a href="mailto:">Mail</a>
+              <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+              <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+              <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+              <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+              <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+              <a class="btn btn-social-icon " href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
             </div>
           </div>
         </div>
