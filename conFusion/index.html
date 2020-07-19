@@ -80,8 +80,13 @@
               your culinary senses!
             </p>
           </div>
-          <div class="col-12 col-sm">
+          <div class="col-12 col-sm-3">
             <img src="img/logo.png" alt="logo" class="img-fluid" />
+          </div>
+          <div class="col-12 col-sm-3 text-center">
+            <a href="#reservetbl" class="btn btn-warning col-sm-10"
+              >Reserve Table</a
+            >
           </div>
         </div>
       </div>
@@ -101,10 +106,16 @@
             />
             <div class="media-body">
               <h2>
-                Uthappizza <span class="badge badge-danger">HOT</span>
-                <span class="badge badge-pill bg-secondary">$4.99</span>
+                Uthappizza
+                <br class="d-block d-md-none" /><span class="badge badge-danger"
+                  >HOT</span
+                >
+                <br class="d-block d-sm-none" /><span
+                  class="badge badge-pill bg-secondary text-white"
+                  >$4.99</span
+                >
               </h2>
-              <p>
+              <p class="d-none d-sm-block">
                 A unique combination of Indian Uthappam (pancake) and Italian
                 pizza, topped with Cerignola olives, ripe vine cherry tomatoes,
                 Vidalia onion, Guntur chillies and Buffalo Paneer.
@@ -131,7 +142,7 @@
               <h2>
                 Weekend Grand Buffet <span class="badge badge-danger">NEW</span>
               </h2>
-              <p>
+              <p class="d-none d-sm-block">
                 Featuring mouthwatering combinations with a choice of five
                 different salads, six enticing appetizers, six main entrees and
                 five choicest desserts. Free flowing bubbly and soft drinks. All
@@ -156,12 +167,96 @@
             <div class="media-body">
               <h2>Alberto Somayya</h2>
               <h4>Executive Chef</h4>
-              <p>
+              <p class="d-none d-sm-block">
                 Award winning three-star Michelin chef with wide International
                 experience having worked closely with whos-who in the culinary
                 world, he specializes in creating mouthwatering Indo-Italian
                 fusion experiences.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-content justify-content-center">
+        <div class="col-12 col-sm-6">
+          <div class="card">
+            <div id="reservetbl" class="card-header">
+              <h2 class="card-title text-white">Reserve a Table</h2>
+            </div>
+            <div class="card-body">
+              <dl class="row">
+                <dt class="col-md-3">Number of Guests</dt>
+                <dd class="col-md-9">
+                  <form action="">
+                    <div class="form-group row">
+                      <div class="form-radio">
+                        <input
+                          name="guestno"
+                          type="radio"
+                          class="form-radio-input ml-2"
+                          id="1"
+                        />
+                        <label for="1" class="form-radio-label">1</label>
+                        <input
+                          name="guestno"
+                          type="radio"
+                          id="2"
+                          class="form-radio-input ml-2"
+                        />
+                        <label for="2" class="form-radio-label">2</label>
+                        <input
+                          name="guestno"
+                          type="radio"
+                          id="3"
+                          class="form-radio-input ml-2"
+                        />
+                        <label for="3" class="form-radio-label">3</label>
+                        <input
+                          name="guestno"
+                          type="radio"
+                          class="form-radio-input ml-2"
+                          id="4"
+                        />
+                        <label for="4" class="form-radio-label">4</label>
+                        <input
+                          name="guestno"
+                          type="radio"
+                          id="5"
+                          class="form-radio-input ml-2"
+                        />
+                        <label for="5" class="form-radio-label">5</label>
+                        <input
+                          name="guestno"
+                          type="radio"
+                          id="6"
+                          class="form-radio-input ml-2"
+                        />
+                        <label for="6" class="form-radio-label">6</label>
+                      </div>
+                    </div>
+                  </form>
+                </dd>
+                <dt class="col-md-3">
+                  Date and Time
+                </dt>
+                <dd class="col-md-9">
+                  <form action="">
+                    <div class="form-group row">
+                      <input
+                        type="time"
+                        class="form-control col-5"
+                        placeholder="Time"
+                      />
+                      <input
+                        type="date"
+                        class="form-control col-6 ml-auto"
+                        placeholder="Date"
+                      />
+                    </div>
+                  </form>
+                </dd>
+                <a href="#" class="col-5 offset-3 btn btn-primary">Reserve</a>
+              </dl>
             </div>
           </div>
         </div>
