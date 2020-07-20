@@ -44,3 +44,9 @@ body {
 #reservetbl {
   background-color: #ffc400;
 }
+.tab-content {
+  border-left: 1px ridge #ddd;
+  border-right: 1px ridge #ddd;
+  border-bottom: 1px ridge #ddd;
+  padding: 15px;
+}
