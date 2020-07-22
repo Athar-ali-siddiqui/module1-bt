@@ -62,3 +62,8 @@ body {
   left: 0; */
   min-height: 300px;
 }
+#carouselbtn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

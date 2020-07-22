@@ -328,27 +328,33 @@
                   </p>
                 </div>
               </div>
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#carousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+              </ol>
+              <a
+                href="#carousel"
+                class="carousel-control-prev"
+                role="button"
+                data-slide="prev"
+                ><span class="carousel-control-prev-icon"></span
+              ></a>
+              <a
+                href="#carousel"
+                class="carousel-control-next"
+                role="button"
+                data-slide="next"
+                ><span class="carousel-control-next-icon"></span
+              ></a>
             </div>
-
-            <ol class="carousel-indicators">
-              <li data-target="#carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel" data-slide-to="1"></li>
-              <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
-            <a
-              href="#carousel"
-              class="carousel-control-prev"
-              role="button"
-              data-slide="prev"
-              ><span class="carousel-control-prev-icon"></span
-            ></a>
-            <a
-              href="#carousel"
-              class="carousel-control-next"
-              role="button"
-              data-slide="next"
-              ><span class="carousel-control-next-icon"></span
-            ></a>
+            <button class="btn btn-danger btn-sm" id="carouselbtn">
+              <span class="fa fa-pause"></span>
+            </button>
           </div>
         </div>
       </div>
@@ -589,5 +595,23 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#carousel").carousel({ interval: 500 });
+        $("#carouselbtn").click(function () {
+          if ($("#carouselbtn").children("span").hasClass("fa-pause")) {
+            console.log("1");
+            $("#carousel").carousel("pause");
+            $("#carouselbtn").children("span").removeClass("fa-pause");
+            $("#carouselbtn").children("span").addClass("fa-play");
+          } else {
+            console.log("2");
+            $("#carousel").carousel("cycle");
+            $("#carouselbtn").children("span").removeClass("fa-play");
+            $("#carouselbtn").children("span").addClass("fa-pause");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
