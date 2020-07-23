@@ -2,7 +2,7 @@ $lt-gray: #ddd;
 $background-dark: #79159a;
 $background-light: #a917fa;
 $background-pale: #f0a4ed;
-
+$background-pink: #fa1766;
 // Height variables
 $carousel-item-height: 300px;
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
@@ -69,4 +69,16 @@ body {
   position: absolute;
   bottom: 0px;
   z-index: 1;
+}
+.faag,
+.active > a {
+  background-color: $background-pink;
+}
+.modal-header,
+.modal-header > button {
+  background-color: $background-dark;
+  color: floralwhite;
+}
+.modal-body {
+  background-color: $background-pale;
 }

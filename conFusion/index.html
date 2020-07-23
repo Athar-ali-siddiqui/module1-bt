@@ -68,9 +68,7 @@
           </ul>
         </div>
         <span class="navbar-text"
-          ><a data-toggle="modal" data-target="#loginModal" class="">
-            <span class="fa fa-sign-in"></span> Login</a
-          ></span
+          ><a id="loginbtn"> <span class="fa fa-sign-in"></span> Login</a></span
         >
       </div>
     </nav>
@@ -79,7 +77,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h3 class="modal-title">Login</h3>
-            <button class="close" type="button" data-dismiss="modal">
+            <button class="close loginModalclose" type="button">
               &times;
             </button>
           </div>
@@ -119,9 +117,8 @@
               </div>
               <div class="form-row">
                 <button
-                  class="btn btn-secondary ml-auto"
+                  class="btn btn-secondary ml-auto loginModalclose"
                   type="button"
-                  data-dismiss="modal"
                 >
                   Cancel
                 </button>
@@ -149,22 +146,19 @@
             <img src="img/logo.png" alt="logo" class="img-fluid" />
           </div>
           <div class="col-12 col-sm-3 text-center">
-            <a
-              data-target="#reModal"
-              data-toggle="modal"
-              class="btn btn-block nav-link btn-warning"
+            <a id="reservebtn" class="btn btn-block nav-link btn-warning"
               >Reserve Table</a
             >
           </div>
         </div>
       </div>
     </header>
-    <div class="modal fade" id="reModal" role="dialog">
+    <div class="modal fade" id="reserveModal" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
         <div class="modal-content">
           <div class="modal-header">
             <h3 class="modal-title">Reserve a Table</h3>
-            <button type="button" data-dismiss="modal" class="close">
+            <button type="button" class="close closeModal">
               &times;
             </button>
           </div>
@@ -255,8 +249,7 @@
             <div class="row">
               <button
                 type="button"
-                data-dismiss="modal"
-                class="btn btn-secondary offset-3"
+                class="btn btn-secondary offset-3 closeModal"
               >
                 Cancel
               </button>
@@ -352,7 +345,10 @@
                 ><span class="carousel-control-next-icon"></span
               ></a>
             </div>
-            <button class="btn btn-danger btn-sm" id="carouselbtn">
+            <button
+              class="btn btn-danger btn-sm"
+              id="carouselButton"
+            >
               <span id="carousel-button-icon" class="fa fa-pause"></span>
             </button>
           </div>
@@ -442,90 +438,6 @@
           </div>
         </div>
       </div>
-      <div class="row row-content justify-content-center">
-        <div class="col-12 col-sm-6">
-          <div class="card">
-            <div id="reservetbl" class="card-header">
-              <h2 class="card-title text-white">Reserve a Table</h2>
-            </div>
-            <div class="card-body">
-              <dl class="row">
-                <dt class="col-md-3">Number of Guests</dt>
-                <dd class="col-md-9">
-                  <form action="">
-                    <div class="form-group row">
-                      <div class="form-radio">
-                        <input
-                          name="guestno"
-                          type="radio"
-                          class="form-radio-input ml-2"
-                          id="1"
-                        />
-                        <label for="1" class="form-radio-label">1</label>
-                        <input
-                          name="guestno"
-                          type="radio"
-                          id="2"
-                          class="form-radio-input ml-2"
-                        />
-                        <label for="2" class="form-radio-label">2</label>
-                        <input
-                          name="guestno"
-                          type="radio"
-                          id="3"
-                          class="form-radio-input ml-2"
-                        />
-                        <label for="3" class="form-radio-label">3</label>
-                        <input
-                          name="guestno"
-                          type="radio"
-                          class="form-radio-input ml-2"
-                          id="4"
-                        />
-                        <label for="4" class="form-radio-label">4</label>
-                        <input
-                          name="guestno"
-                          type="radio"
-                          id="5"
-                          class="form-radio-input ml-2"
-                        />
-                        <label for="5" class="form-radio-label">5</label>
-                        <input
-                          name="guestno"
-                          type="radio"
-                          id="6"
-                          class="form-radio-input ml-2"
-                        />
-                        <label for="6" class="form-radio-label">6</label>
-                      </div>
-                    </div>
-                  </form>
-                </dd>
-                <dt class="col-md-3">
-                  Date and Time
-                </dt>
-                <dd class="col-md-9">
-                  <form action="">
-                    <div class="form-group row">
-                      <input
-                        type="time"
-                        class="form-control col-5"
-                        placeholder="Time"
-                      />
-                      <input
-                        type="date"
-                        class="form-control col-6 ml-auto"
-                        placeholder="Date"
-                      />
-                    </div>
-                  </form>
-                </dd>
-                <a href="#" class="col-5 offset-3 btn btn-primary">Reserve</a>
-              </dl>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <footer class="footer">
@@ -597,17 +509,29 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("#carousel").carousel({ interval: 2000 });
-        $("#carouselbtn").click(function () {
-          if ($("#carouselbtn").children("span").hasClass("fa-pause")) {
+        $("#carousel").carousel({ interval: 1000 });
+        $("#carouselButton").click(function () {
+          if ($("#carouselButton").children("span").hasClass("fa-pause")) {
             $("#carousel").carousel("pause");
-            $("#carouselbtn").children("span").removeClass("fa-pause");
-            $("#carouselbtn").children("span").addClass("fa-play");
+            $("#carouselButton").children("span").removeClass("fa-pause");
+            $("#carouselButton").children("span").addClass("fa-play");
           } else {
             $("#carousel").carousel("cycle");
-            $("#carouselbtn").children("span").removeClass("fa-play");
-            $("#carouselbtn").children("span").addClass("fa-pause");
+            $("#carouselButton").children("span").removeClass("fa-play");
+            $("#carouselButton").children("span").addClass("fa-pause");
           }
+        });
+        $("#reservebtn").click(function () {
+          $("#reserveModal").modal();
+        });
+        $(".closeModal").click(function () {
+          $("#reserveModal").modal("hide");
+        });
+        $("#loginbtn").click(function () {
+          $("#loginModal").modal();
+        });
+        $(".loginModalclose").click(function () {
+          $("#loginModal").modal("hide");
         });
       });
     </script>
