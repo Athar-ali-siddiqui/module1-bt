@@ -19,11 +19,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
     "lite-server": "^2.3.0",
     "node-sass": "^4.14.1",
     "onchange": "^7.0.2",
-    "parallelshell": "^3.0.2",
-    "rimraf": "^3.0.2"
+    "parallelshell": "^3.0.1",
+    "rimraf": "^3.0.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.4.4",

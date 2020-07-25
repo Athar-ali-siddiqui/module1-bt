@@ -1,0 +1,24 @@
+{
+  "aboutus": [
+    {
+      "name1": "Peter Pan",
+      "designation1": "Chief Epicurious Officer",
+      "info1": "Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections."
+    },
+    {
+      "name2": "Dhanasekaran Witherspoon",
+      "designation2": "Chief Food Officer ",
+      "info2": "Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em> "
+    },
+    {
+      "name3": "Agumbe Tang",
+      "designation3": "Chief Taste Officer ",
+      "info3": "Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet  exacting standards. He lives by his motto,<em>You click only if you survive my lick.</em> "
+    },
+    {
+      "name4": "Alberto Somayya",
+      "designation4": "Executive Chef",
+      "info4": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinaryworld, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em>"
+    }
+  ]
+}
